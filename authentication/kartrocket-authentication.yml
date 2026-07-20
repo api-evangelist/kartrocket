@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://apidocs.shiprocket.in/ + https://github.com/bfrs/shiprocket-mcp
+docs: https://apidocs.shiprocket.in/
+summary:
+  types: [http]
+  scheme: bearer
+  token_source: login-endpoint
+  oauth2_flows: []
+notes: >-
+  Shiprocket's public API uses token (JWT) bearer auth. The seller POSTs email +
+  password to the login endpoint and receives a bearer token used on every
+  subsequent request as `Authorization: Bearer <token>`. Confirmed by the official
+  MCP server, which takes SELLER_EMAIL + SELLER_PASSWORD and logs in on the seller's
+  behalf. No OAuth2 authorization-code flow and no static API keys are documented;
+  the login token is the credential.
+schemes:
+  - name: bearerAuth
+    type: http
+    scheme: bearer
+    bearer_format: JWT
+    in: header
+    header: Authorization
+    obtain:
+      method: POST
+      url: https://apiv2.shiprocket.in/v1/external/auth/login
+      body: { email: <seller-email>, password: <seller-password> }
+      returns: token
+    token_lifetime: ~10 days (re-login on expiry)
+    sources: [apidocs.shiprocket.in, github.com/bfrs/shiprocket-mcp]
