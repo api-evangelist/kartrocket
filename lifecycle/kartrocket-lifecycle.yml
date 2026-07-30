@@ -1,0 +1,19 @@
+generated: '2026-07-19'
+method: searched
+source: https://apidocs.shiprocket.in/ + https://status.shiprocket.in/
+versioning:
+  scheme: uri-path
+  current: v1
+  segment: /v1/external/
+  docs: https://apidocs.shiprocket.in/
+status_page: https://status.shiprocket.in/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No public deprecation policy or RFC 8594 Sunset/Deprecation header support found.
+sla:
+  url: null
+notes: >-
+  Shiprocket runs a public status page at status.shiprocket.in. Versioning is by
+  URI path (/v1/external/). No published deprecation policy was found, so no
+  `Deprecation` pointer is emitted; a `StatusPage` pointer is.

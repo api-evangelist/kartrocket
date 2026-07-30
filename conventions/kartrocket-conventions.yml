@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+source: https://apidocs.shiprocket.in/
+docs: https://apidocs.shiprocket.in/
+base_url: https://apiv2.shiprocket.in/v1/external/
+media_type: application/json
+authentication:
+  style: bearer-token
+  detail: authentication/kartrocket-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v1
+  segment: /v1/external/
+pagination:
+  style: page-number
+  params: [page, per_page]
+  notes: List endpoints (e.g. orders) page with `page` and `per_page` query params.
+idempotency:
+  supported: false
+  notes: >-
+    Shiprocket does not document a client-supplied idempotency-key header. Order
+    creation is deduplicated server-side on the seller's own `order_id`
+    (source order id), not via an Idempotency-Key contract. No `type: Idempotency`
+    pointer is emitted (no idempotency contract to advertise).
+error_envelope:
+  shape: json
+  notes: >-
+    Errors return a JSON body with `message` (and often field-level validation
+    messages) alongside a non-2xx HTTP status. No RFC 9457 problem+json.
+rate_limiting:
+  documented: false
+  notes: Rate limits are enforced but not published as a documented signal.
+cross_links:
+  authentication: authentication/kartrocket-authentication.yml
+  lifecycle: lifecycle/kartrocket-lifecycle.yml

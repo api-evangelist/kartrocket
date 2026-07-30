@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of shiprocket.in + apiv2.shiprocket.in
+notes: >-
+  No /.well-known/ discovery documents are published. A real /llms.txt IS served
+  at the site root (captured separately in llms/kartrocket-llms.txt) but is not a
+  .well-known document. No SecurityTxt, OIDC, OAuth-AS, api-catalog, or ai-plugin
+  found, so no WellKnown/SecurityTxt pointer is emitted.
+hosts:
+  - host: https://shiprocket.in
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /llms.txt
+        status: 200
+        file: ../llms/kartrocket-llms.txt
+  - host: https://apiv2.shiprocket.in
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 403

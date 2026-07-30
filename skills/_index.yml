@@ -1,0 +1,8 @@
+generated: '2026-07-19'
+method: generated
+source: mcp/kartrocket-mcp.yml
+skills:
+  - file: kartrocket-ship-an-order.md
+    name: Ship an order with Shiprocket
+    api: mcp/kartrocket-mcp.yml
+    operations: [shipping_rate_calculator, order_create, order_ship, order_pickup_schedule, generate_shipment_label, order_track]

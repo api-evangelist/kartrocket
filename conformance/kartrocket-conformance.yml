@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: derived
+source: authentication/kartrocket-authentication.yml + conventions/kartrocket-conventions.yml
+notes: >-
+  Cross-cutting standards posture derived from the captured auth/conventions
+  artifacts. No published compliance program (SOC 2 / ISO 27001 / PCI / HIPAA)
+  was found on a trust/security page, so no `Compliance` pointer is emitted.
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: auth is login-token bearer, not OAuth2 flows
+  - id: oidc
+    conforms: false
+  - id: http-bearer
+    conforms: true
+    evidence: Authorization Bearer <JWT> on every request
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: errors return plain JSON {message}, not application/problem+json
+  - id: json
+    conforms: true
+    evidence: application/json request/response bodies
+  - id: pagination
+    conforms: true
+    evidence: page + per_page query params on list endpoints

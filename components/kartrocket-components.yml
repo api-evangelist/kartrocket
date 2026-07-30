@@ -1,0 +1,15 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/@bfrs/agentic-components + https://agentic-components.vercel.app/
+notes: >-
+  First-party embeddable/agentic UI component library published by Shiprocket
+  (bfrs). Distinct from server-side SDKs. Client-side surface for embedding
+  Shiprocket agentic/commerce experiences.
+families:
+  - family: Agentic Components
+    package: "@bfrs/agentic-components"
+    loader: npm install @bfrs/agentic-components
+    showcase: https://agentic-components.vercel.app/
+    repo: https://github.com/bfrs/agentic-components
+    official: true
+    description: Shiprocket agentic component library and documentation showcase.

@@ -1,0 +1,54 @@
+generated: '2026-07-19'
+method: searched
+source: npm, PyPI, Packagist, RubyGems registry search + github.com/bfrs org
+notes: >-
+  Shiprocket (BigFoot Retail Solutions / bfrs) publishes first-party packages under
+  the @bfrs npm scope and the bfrs GitHub org, but does NOT ship an official
+  general-purpose API client SDK on the public registries. The many
+  shiprocket-* / laravel-shiprocket / medusa-*-shiprocket libraries below are
+  community-maintained (official: false). No first-party API-client SDK found, so
+  no canonical `SDKs` pointer is emitted.
+packages:
+  - language: javascript
+    registry: npm
+    name: "@bfrs/agentic-components"
+    url: https://www.npmjs.com/package/@bfrs/agentic-components
+    install: npm install @bfrs/agentic-components
+    official: true
+    description: Shiprocket agentic component library and documentation showcase (embeddable UI).
+    repo: https://github.com/bfrs/agentic-components
+  - language: typescript
+    registry: github
+    name: shiprocket-mcp
+    url: https://github.com/bfrs/shiprocket-mcp
+    install: git clone https://github.com/bfrs/shiprocket-mcp
+    official: true
+    description: Official Shiprocket Model Context Protocol server (io.github.bfrs/shiprocket-mcp).
+  # --- community / third-party (not first-party) ---
+  - language: javascript
+    registry: npm
+    name: shiprocket-node
+    url: https://www.npmjs.com/package/shiprocket-node
+    official: false
+  - language: javascript
+    registry: npm
+    name: shiprocket-js
+    url: https://www.npmjs.com/package/shiprocket-js
+    official: false
+  - language: python
+    registry: pypi
+    name: shiprocket
+    url: https://pypi.org/project/shiprocket/
+    install: pip install shiprocket
+    official: false
+    description: Community Python wrapper by Pulak Pattanayak (github.com/pupattan/shiprocket).
+  - language: php
+    registry: packagist
+    name: rajathans/shiprocket-php
+    url: https://packagist.org/packages/rajathans/shiprocket-php
+    official: false
+  - language: php
+    registry: packagist
+    name: aniket-in/laravel-shiprocket
+    url: https://packagist.org/packages/aniket-in/laravel-shiprocket
+    official: false
