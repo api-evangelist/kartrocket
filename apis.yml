@@ -1,7 +1,16 @@
 aid: kartrocket
 name: KartRocket
-description: KartRocket is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  KartRocket is the original brand of what is now Shiprocket, India's leading
+  eCommerce enablement and shipping-logistics platform (operated by BigFoot Retail
+  Solutions Pvt Ltd). Shiprocket helps D2C brands, SMEs, and enterprise sellers
+  manage eCommerce shipping, last-mile delivery, reverse logistics, freight,
+  hyperlocal delivery, cross-border shipping, warehouse fulfillment, and seller
+  analytics from one platform — delivering to 19,000+ pin codes in India and 220+
+  countries. The public Shiprocket API (apiv2.shiprocket.in/v1/external) lets
+  sellers rate-shop couriers, create and cancel orders, generate AWBs and labels,
+  schedule pickups, and track shipments; an official MCP server and agentic UI
+  component library extend it to AI agents. Backed by 500 Global.
 url: https://raw.githubusercontent.com/api-evangelist/kartrocket/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +18,54 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://sr-website.shiprocket.in/wp-content/uploads/2025/02/OG-Image-for-Shiprocket.png
 tags:
 - Company
-apis: []
+- Shipping
+- Logistics
+- eCommerce
+- Fulfillment
+- Last-Mile Delivery
+- India
+- Order Management
+apis:
+- name: Shiprocket API
+  description: >-
+    Public REST API for eCommerce shipping and order management — courier rate
+    calculation and serviceability, order create/update/cancel, AWB and label
+    generation, pickup scheduling, shipment tracking, returns/NDR, and wallet.
+    Token (JWT) bearer auth obtained from the login endpoint.
+  humanURL: https://apidocs.shiprocket.in/
+  baseURL: https://apiv2.shiprocket.in/v1/external/
+  tags:
+  - Shipping
+  - Logistics
+  - eCommerce
+  - Order Management
+  properties:
+  - type: Documentation
+    url: https://apidocs.shiprocket.in/
+  - type: APIReference
+    url: https://apidocs.shiprocket.in/
+  - type: Authentication
+    url: authentication/kartrocket-authentication.yml
+  - type: Conventions
+    url: conventions/kartrocket-conventions.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +74,50 @@ maintainers:
 common:
 - type: Website
   url: https://shiprocket.in
+- type: DeveloperPortal
+  url: https://shiprocket.in/developers
+- type: Documentation
+  url: https://apidocs.shiprocket.in/
+- type: APIReference
+  url: https://apidocs.shiprocket.in/
+- type: Blog
+  url: https://shiprocket.in/blog
+- type: Pricing
+  url: https://shiprocket.in/pricing
+- type: SignUp
+  url: https://shiprocket.in/login
+- type: Support
+  url: https://shiprocket.in/contact
+- type: TermsOfService
+  url: https://shiprocket.in/terms-conditions
+- type: PrivacyPolicy
+  url: https://shiprocket.in/privacy-policy
+- type: StatusPage
+  url: https://status.shiprocket.in/
+- type: GitHubOrganization
+  url: https://github.com/bfrs
+- type: MCPServer
+  url: mcp/kartrocket-mcp.yml
+- type: LLMsTxt
+  url: llms/kartrocket-llms.txt
+- type: Authentication
+  url: authentication/kartrocket-authentication.yml
+- type: Conventions
+  url: conventions/kartrocket-conventions.yml
+- type: Lifecycle
+  url: lifecycle/kartrocket-lifecycle.yml
+- type: Conformance
+  url: conformance/kartrocket-conformance.yml
+- type: Packages
+  url: packages/kartrocket-packages.yml
+- type: Components
+  url: components/kartrocket-components.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DomainSecurity
+  url: security/kartrocket-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
