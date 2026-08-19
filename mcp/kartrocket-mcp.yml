@@ -3,39 +3,45 @@ method: searched
 status: published
 source: https://github.com/bfrs/shiprocket-mcp
 registry_name: io.github.bfrs/shiprocket-mcp
-notes: >-
-  Official first-party Shiprocket MCP server (published by BigFoot Retail Solutions,
-  the bfrs GitHub org that also owns @bfrs/agentic-components). Self-hosted; run
-  locally via npm and wired into Claude Desktop / Cursor. Authenticates directly to
-  a seller's Shiprocket account with SELLER_EMAIL + SELLER_PASSWORD (token auth).
-  Supports stdio (default) and HTTP transport (MCP_TRANSPORT=HTTP).
+notes: Official first-party Shiprocket MCP server (published by BigFoot Retail Solutions, the bfrs GitHub
+  org that also owns @bfrs/agentic-components). Self-hosted; run locally via npm and wired into Claude
+  Desktop / Cursor. Authenticates directly to a seller's Shiprocket account with SELLER_EMAIL + SELLER_PASSWORD
+  (token auth). Supports stdio (default) and HTTP transport (MCP_TRANSPORT=HTTP).
 server:
   name: Shiprocket
   vendor: BigFoot Retail Solutions (Shiprocket)
-  transport: stdio        # also supports http via MCP_TRANSPORT=HTTP
+  transport: stdio
   repo: https://github.com/bfrs/shiprocket-mcp
   runtime: node >=20 <23
   auth:
     kind: seller-credentials
-    env: [SELLER_EMAIL, SELLER_PASSWORD]
+    env:
+    - SELLER_EMAIL
+    - SELLER_PASSWORD
 tools:
-  - name: estimated_date_of_delivery
-    description: Estimated date of delivery for a given location.
-  - name: shipping_rate_calculator
-    description: Check serviceable couriers with their rates and coverage.
-  - name: list_pickup_addresses
-    description: List all configured pickup addresses.
-  - name: order_list
-    description: Fetch recently created orders.
-  - name: order_track
-    description: Track an order (by AWB, Shiprocket Order ID, or Source Order ID).
-  - name: order_ship
-    description: Ship an order to a serviceable courier partner (by rules or named courier).
-  - name: order_pickup_schedule
-    description: Schedule pickup of an order.
-  - name: generate_shipment_label
-    description: Generate the label of an order or shipment.
-  - name: order_cancel
-    description: Cancel an order by order ID.
-  - name: order_create
-    description: Create an order.
+- name: estimated_date_of_delivery
+  description: Estimated date of delivery for a given location.
+- name: shipping_rate_calculator
+  description: Check serviceable couriers with their rates and coverage.
+- name: list_pickup_addresses
+  description: List all configured pickup addresses.
+- name: order_list
+  description: Fetch recently created orders.
+- name: order_track
+  description: Track an order (by AWB, Shiprocket Order ID, or Source Order ID).
+- name: order_ship
+  description: Ship an order to a serviceable courier partner (by rules or named courier).
+- name: order_pickup_schedule
+  description: Schedule pickup of an order.
+- name: generate_shipment_label
+  description: Generate the label of an order or shipment.
+- name: order_cancel
+  description: Cancel an order by order ID.
+- name: order_create
+  description: Create an order.
+deployment:
+  mode: local-stdio
+  verified: searched
+  tools: 10
+  checked: '2026-08-12'
+  source: catalog MCP census
