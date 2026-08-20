@@ -38,6 +38,15 @@ tags:
 - Company
 - Shipping
 - Logistics
+- E-Commerce
+- Fulfillment
+- Last Mile Delivery
+- India
+- Order Management
+tags_raw:
+- Company
+- Shipping
+- Logistics
 - eCommerce
 - Fulfillment
 - Last-Mile Delivery
@@ -53,6 +62,11 @@ apis:
   humanURL: https://apidocs.shiprocket.in/
   baseURL: https://apiv2.shiprocket.in/v1/external/
   tags:
+  - Shipping
+  - Logistics
+  - E-Commerce
+  - Order Management
+  tags_raw:
   - Shipping
   - Logistics
   - eCommerce
