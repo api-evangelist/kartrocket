@@ -1,0 +1,29 @@
+# Front Door AI Index — kartrocket — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: kartrocket
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: shiprocket.in
+  final_host: www.shiprocket.in:443
+  ownership: own
+  owner: kartrocket
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 11
+  host_score: 11
+  density: 6.03
+  words: 1824
+  tiers:
+    agentic: 1
+    core: 10
+    model: 0
+  ambiguous: 3
+  top_terms:
+    AI: 10
+    automation: 1
+    copilot: 1
+    intelligence: 1
+    smart: 1
